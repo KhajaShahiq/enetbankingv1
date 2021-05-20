@@ -64,6 +64,10 @@ public class AddCustomerPage {
 	@FindBy(how = How.NAME, using = "sub")
 	WebElement btnSubmit;
 	
+	@CacheLookup
+	@FindBy(xpath="tbody tr:nth-child(4) td:nth-child(2)")
+	WebElement CustomerID;
+	
 	public void clickAddNewCustomer() {
 		lnkAddNewCustomer.click();
 			
@@ -86,26 +90,32 @@ public class AddCustomerPage {
 	}
 
 	public void custaddress(String caddress) {
+		
 		txtaddress.sendKeys(caddress);
 	}
 
 	public void custcity(String ccity) {
+		txtcity.clear();
 		txtcity.sendKeys(ccity);
 	}
 
 	public void custstate(String cstate) {
+		txtstate.clear();
 		txtstate.sendKeys(cstate);
 	}
 
 	public void custpinno(String cpinno) {
+		txtpinno.clear();
 		txtpinno.sendKeys(String.valueOf(cpinno));
 	}
 
 	public void custtelephoneno(String ctelephoneno) {
+		txttelephoneno.clear();
 		txttelephoneno.sendKeys(ctelephoneno);
 	}
 
 	public void custemailid(String cemailid) {
+		txtemailid.clear();
 		txtemailid.sendKeys(cemailid);
 	}
 
@@ -117,6 +127,10 @@ public class AddCustomerPage {
 		btnSubmit.click();
 	}
 	
-	
+	public String customerid() {
+		
+		return CustomerID.getText().toString();
+		
+	}
 	
 }

@@ -15,10 +15,13 @@ public class TC_AddCustomerTest_003 extends BaseClass
 	public void addNewCustomer() throws InterruptedException, IOException
 	{
 		LoginPage lp=new LoginPage(driver);
+		
 		lp.setUserName(username);
 		logger.info("User name is provided");
+		
 		lp.setPassword(password);
 		logger.info("Passsword is provided");
+		
 		lp.clickSubmit();
 		
 		Thread.sleep(3000);
@@ -34,6 +37,9 @@ public class TC_AddCustomerTest_003 extends BaseClass
 		addcust.custgender("male");
 		addcust.custdob("08","12","1996");
 		Thread.sleep(5000);
+		
+		
+		
 		addcust.custaddress("INDIA");
 		addcust.custcity("HYD");
 		addcust.custstate("Telngana");
@@ -55,7 +61,8 @@ public class TC_AddCustomerTest_003 extends BaseClass
 		{
 			Assert.assertTrue(true);
 			logger.info("test case passed....");
-			
+			String z=addcust.customerid();
+			System.out.println(z);
 		}
 		else
 		{

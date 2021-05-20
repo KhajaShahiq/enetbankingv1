@@ -2,6 +2,7 @@ com\enetbanking\utilities\Reporting.class
 com\enetbanking\pageObjects\LoginPage.class
 com\enetbanking\testcases\TC_AddCustomerTest_003.class
 com\enetbanking\utilities\XLUtils.class
+com\enetbanking\testcases\TC_EditCustomer.class
 com\enetbanking\pageObjects\AddCustomerPage.class
 com\enetbanking\utilities\ReadConfig.class
 com\enetbanking\testcases\TC_LoginDDT_002.class
